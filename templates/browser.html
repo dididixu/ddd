@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<title>File Browser</title>
+<h1>File Browser</h1>
+
+<a href="{{ url_for('manage_file') }}">Manage_jpg</a>/
+<a href="{{ url_for('manage_file1') }}">Manage_avi</a>
+<hr>
+
+<p>URL: {{ file_url }}</p>
+<img src="{{ file_url }}">

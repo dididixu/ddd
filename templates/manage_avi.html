@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title>File Manager</title>
+<h1>File Manager</h1>
+<style>
+#bbs {
+    display:;
+}
+div{ display:inline}
+</style>
+<a href="{{ url_for('manage_file') }}">Manage_jpg</a>/
+<a href="{{ url_for('manage_file1') }}">Manage_avi</a>
+<hr>
+
+{% for avi in files_list %}
+    - {{ avi }}
+    <div>
+        <a href="{{ url_for('delete_file1',filename=avi) }}">del</a>
+        <a href="{{ url_for('download_file1',filename=avi) }}">download</a>
+    </div>
+    {% if files_map.get(avi,0) != 0 %}
+    <div name="bbs" display="">
+        <a href="{{ url_for('delete_file3', filename=avi) }}">del_result</a>
+        <a href="{{ url_for('download_file3',filename=avi) }}">download_result</a>
+    </div>
+    {% endif %}
+    <br>
+{% endfor %}

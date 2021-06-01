@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#bbs {
+    display:;
+}
+</style>
+<script>
+function displayHideUI(){
+    var ui =document.getElementById("bbs");
+    ui.style.display="none";
+}
+
+function displayShowUI(){
+    var ui =document.getElementById("bbs");
+    ui.style.display="";//display为空的话会好使，为block会使后边的空间换行
+}
+
+function visibilityHideUI(){
+    var ui =document.getElementById("bbs");
+    ui.style.visibility="hidden";
+}
+
+function visibilityShowUI(){
+    var ui =document.getElementById("bbs");
+    ui.style.visibility="visible";
+}
+
+function ifOnClickUI(){
+    var ui =document.getElementById("bbs");
+    if(ui.style.display==""){
+    ui.style.display="none";
+    }
+    else{
+    ui.style.display="";
+    }
+}
+
+</script>
+</head>
+
+<body>
+<input type="button" value="隐藏UI" onclick="displayHideUI()"/>
+<input type="button" value="显示UI" onclick="displayShowUI()"/>
+<input type="button" value="IF显示UI" onclick="ifOnClickUI()"/>
+<div id="bbs" display="">
+隐藏内容
+</div>
+</body>
+</html>

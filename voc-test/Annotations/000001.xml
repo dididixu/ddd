@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>000001.jpg</filename>
+	<path>D:\dataset\JPEGImages\000001.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>workcard</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>285</xmin>
+			<ymin>253</ymin>
+			<xmax>314</xmax>
+			<ymax>357</ymax>
+		</bndbox>
+	</object>
+</annotation>

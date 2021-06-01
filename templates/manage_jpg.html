@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<title>File Manager</title>
+<h1>File Manager</h1>
+
+<a href="{{ url_for('manage_file') }}">Manage_jpg</a>/
+<a href="{{ url_for('manage_file1') }}">Manage_avi</a>
+<hr>
+<style>
+#bbs {
+    display:;
+}
+div{ display:inline}
+</style>
+
+{% for photo in files_list %}
+
+    - {{ photo }}
+    <div>
+        <a href="{{ url_for('open_file', filename=photo) }}">open</a>
+        <a href="{{ url_for('delete_file', filename=photo) }}">del</a>
+        <a href="{{ url_for('download_file',filename=photo) }}">download</a>
+    </div>
+    {% if files_map.get(photo,0) != 0 %}
+    <div name="bbs" display="">
+        <a href="{{ url_for('open_file2', filename=photo) }}">open_result</a>
+        <a href="{{ url_for('delete_file2', filename=photo) }}">del_result</a>
+        <a href="{{ url_for('download_file2',filename=photo) }}">download_result</a>
+    </div>
+    {% endif %}
+    <br>
+{% endfor %}
